@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasch.bnj</title>
+    <link rel="icon" href="cross-3203.png" type="image/png">
+    <style>
+    @font-face {
+        font-family: 'TAN-NIMBUS';
+        src: url('TAN-NIMBUS.otf') format('opentype'); /* Ajuste o caminho conforme necessário */
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'BIGILLA1';
+        src: url('Bigilla.otf') format('opentype'); /* Ajuste o caminho conforme necessário */
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'BIGILLA2';
+        src: url('Bigilla-Bold.otf') format('opentype'); /* Ajuste o caminho conforme necessário */
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    body {
+        background-color: rgb(11, 7, 14);
+        
+    }
+    
+    header {
+        background: rgba(255, 255, 255, 0.066);
+        border-radius: 16px;
+        border: 1px solid rgb(238, 238, 238);
+        backdrop-filter: blur(4px);
+        color: white;
+        padding: 30px;
+        position: relative;
+    }
+    
+    #projects {
+        width: 120px;
+        height: auto;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 16px;
+        border: 1px solid rgb(238, 238, 238);
+        backdrop-filter: blur(2px);
+        color: rgba(255, 255, 255, 0.795);
+        position: absolute;
+        top: 16px;
+        right: calc(0% + 20px);
+        font-family: BIGILLA1;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.5s ease-out;  /* Animação suave para voltar ao tamanho normal */
+    }
+    
+    #projects:hover {
+        transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+        transition: transform 0.5s ease-out;
+    }
+    
+    h1 {
+        font-size: 200px;
+        color: rgb(255, 255, 255);
+        text-align: left; /* Alinha o texto à esquerda */
+        line-height: 1.5;
+        font-family: 'BIGILLA2', sans-serif;
+        position: absolute;
+        margin-left: 50px; /* Ajuste a margem conforme necessário */
+        line-height: 180px;
+        top: 10px;
+    
+    }
+    
+    #infos1 {
+        background: rgba(255, 255, 255, 0.066);
+        border-radius: 16px;
+        border: 1px solid rgb(238, 238, 238);
+        backdrop-filter: blur(4px);
+        font-family: 'TAN-NIMBUS';
+        color: white;
+        position: relative;
+        top: 80px;
+        left: 698px;
+        width: 650px;
+        height: 500px;
+        transform-style: preserve-3d;
+        transform: rotateX(0) rotateY(0);
+        transition: transform 0.1s ease, box-shadow 0.2s ease;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0); /* Inicialmente sem sombra */
+    }
+    
+    #infos2 {
+        background: rgba(255, 255, 255, 0.066);
+        border-radius: 16px;
+        border: 1px solid rgb(238, 238, 238);
+        backdrop-filter: blur(4px);
+        font-family: 'TAN-NIMBUS';
+        color: white;
+        position: relative;
+        top: 120px;
+        left: 80px;
+        width: 650px;
+        height: 500px;
+        transform-style: preserve-3d;
+        transform: rotateX(0) rotateY(0);
+        transition: transform 0.1s ease, box-shadow 0.2s ease;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0); /* Inicialmente sem sombra */
+    }
+    
+    
+    #pinfo {
+        font-family: BIGILLA1;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        padding: 20px;
+        text-align: left; /* Alinha o texto à esquerda */
+        position: absolute;
+        top: 60px;
+        left: 10px;
+       
+    }
+    
+    #p2info {
+        font-family: BIGILLA1;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        padding: 20px;
+        text-align: left; /* Alinha o texto à esquerda */
+        position: absolute;
+        top: 60px;
+        left: 350px;
+        text-align: right;
+       
+    }
+    #Tinfo {
+        font-family: TAN-NIMBUS;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        padding: 0px;
+        text-align: left; /* Alinha o texto à esquerda */
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+    
+    #T2info {
+        font-family: TAN-NIMBUS;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        padding: 0px;
+        text-align: left; /* Alinha o texto à esquerda */
+        position: absolute;
+        top: 10px;
+        left: 300px;
+    }
+    
+    #img img {
+        width: 270px; 
+        height: auto;
+        position: absolute;
+        top: 150px;
+        left: 365px;
+        border-radius: 100%;
+        border: 1px solid rgba(19, 19, 19, 0.735);
+    }
+    
+    #img2 img {
+        width: 270px; 
+        height: auto;
+        position: absolute;
+        top: 150px;
+        left: 45px;
+        border-radius: 100%;
+        border: 1px solid rgba(19, 19, 19, 0.735);
+    }
+    /* Ajustes para telas menores */
+    @media (max-width: 1200px) {
+        h1 {
+            font-size: 80px;
+        }
+        #talktome {
+            right: 10%; /* Ajuste dinâmico para mover o botão */
+        }
+    }
+    
+    @media (max-width: 800px) {
+        h1 {
+            font-size: 60px;
+        }
+        #talktome {
+            right: 15%; /* Ajuste dinâmico para mover o botão */
+        }
+    }
+    
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 40px;
+        }
+        #talktome {
+            right: 20%; /* Ajuste dinâmico para mover o botão */
+        }
+    }
+    
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 30px;
+        }
+        #talktome {
+            right: 25%; /* Ajuste dinâmico para mover o botão */
+        }
+    }
+    
+    #purplelight1 {
+        z-index: -1;
+        border-radius: 80000px;
+        filter: blur(40px);
+        width: 400px;
+        height: 400px;
+        background-color:blueviolet;
+        color: blueviolet;
+        position: absolute;
+        top: -50px;
+        left: 0px;
+       
+    }
+    
+    #purplelight2 {
+        z-index: -1;
+        border-radius: 80000px;
+        filter: blur(40px);
+        width: 400px;
+        height: 400px;
+        background-color:blueviolet;
+        color: blueviolet;
+        position: absolute;
+        top: 270px;
+        left: 760px;
+       
+    }
+    
+    
+    #purplelight4 {
+        z-index: -1;
+        border-radius: 80000px;
+        filter: blur(40px);
+        width: 400px;
+        height: 400px;
+        background-color:blueviolet;
+        color: blueviolet;
+        position: absolute;
+        top: 800px;
+        left: -150px;
+       
+    }
+    
+    #purplelight3 {
+        z-index: -1;
+        border-radius: 80000px;
+        filter: blur(40px);
+        width: 400px;
+        height: 400px;
+        background-color:blueviolet;
+        color: blueviolet;
+        position: absolute;
+        top:1100px;
+        left: 1000px;
+        transform: translateY(-50%); 
+        max-width: none;
+       
+    }
+    #talktome {
+        width: 200px;
+        height: auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.066);
+        border-radius: 16px;
+        border: 1px solid rgb(238, 238, 238);
+        backdrop-filter: blur(2px);
+        color: rgba(255, 255, 255, 0.795);
+        position: absolute;
+        top: 565px; /* Proporcional à altura da viewport */
+        left: 200px; /* Proporcional à largura da viewport */
+        font-family: BIGILLA1;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.5s ease-out;
+    }
+    
+    
+    
+    #talktome:hover {
+        transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+        transition: transform 0.5s ease-out;
+    }</style>
+</head>
+<body>
+    <header id="header">
+        <button id="projects">my projects</button>
+    </header>
+    <h1>Well<br>Come!</h1>
+    
+    <div class= "infos" id="infos1">
+     <h2 id="Tinfo">WHO I AM?</h2>
+     <p id= pinfo>My name is Benjamin! <br>Im a JavaScript coder and a <br> HTML and CSS developer. <br>I do websites for all types of <br>projects, stores, restaurants or<br>companies <br><br> I am always looking for<br>innovation in each project<br>that i take on,<br> bringing creative,<br>functional and modern solutions.<br>My goal is to ensure<br> that every website is intuitive, <br> responsive and aesthetically <br> pleasing</p>
+     <div id="img">
+         <img src="imgeu.jpg">
+     </div>
+    </div>
+
+    <div id="purplelight1">.</div>
+    <div id="purplelight2">s</div>
+
+    <button id="talktome" class="infos" onclick="redirectToWhatsApp()">Talk To Me</button>
+<section id="page2">
+    <div class="infos" id="infos2">
+        <h2 id="T2info">MORE ABOUT ME!</h2>
+        <p id= p2info>I was born and live in Brazil<br>São Paulo region,<br> I was always enchanted<br> by the idea of <br>​​working on the computer, <br>when I was 12 years old,<br> I got my computer,<br> at first I just used it<br> to play video games.<br> And after all <br> I discovered programming and <br>web design<br> I became fascinated <br>and wanted to <br>learn more about it<br> and make a living from it</p>
+        <div id="img2">
+            <img src="imageu2.jpg">
+        </div>
+       </div>
+   
+       <div id="purplelight3">.</div>
+       <div id="purplelight4">s</div>
+   
+     
+
+</section>
+    <script>
+    function redirectToWhatsApp() {
+        window.location.href = "https://api.whatsapp.com/send?phone=5517997464512";
+    }
+   /* window.onload = init; */
+    
+   const infos = document.querySelectorAll('.infos'); // Seleciona todas as divs com a classe 'infos'
+
+infos.forEach(function(box) {  // Itera sobre cada div com a classe 'infos'
+    box.addEventListener('mousemove', function(e) {
+        // Obtém a posição e o tamanho da caixa
+        const rect = box.getBoundingClientRect();
+
+        // Calcula o centro da caixa
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        // Calcula a distância do mouse até o centro da caixa
+        const distanceX = e.clientX - centerX;
+        const distanceY = e.clientY - centerY;
+
+        // Distância total (pitagórica) do mouse até o centro da caixa
+        const distanceFromCenter = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+
+        // Aumenta o limite para 400px ao redor da caixa
+        const limit = 400;
+
+        // Se o mouse estiver dentro do limite de 400px, aplicar as animações
+        if (distanceFromCenter <= (rect.width / 2 + limit)) {
+            // Calcula e aplica a rotação
+            const rotateX = (distanceY / (rect.height / 2)) * 20;
+            const rotateY = -(distanceX / (rect.width / 2)) * 20;
+            box.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+            // Calcula a distância mínima até as bordas para a sombra
+            const distanceToEdgeX = Math.min(e.clientX - rect.left, rect.right - e.clientX);
+            const distanceToEdgeY = Math.min(e.clientY - rect.top, rect.bottom - e.clientY);
+            const distanceToEdge = Math.min(distanceToEdgeX, distanceToEdgeY);
+
+            // Ajusta a intensidade da sombra nas bordas (mais escuro perto da borda)
+            const shadowIntensity = Math.max(0, 1 - distanceToEdge / 100);
+            box.style.boxShadow = `0 0 30px rgba(0, 0, 0, ${shadowIntensity})`;
+        } else {
+            // Quando o mouse sai do limite, volta para a posição inicial e remove a sombra
+            box.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            box.style.boxShadow = '0 0 30px rgba(0, 0, 0, 0)';
+        }
+    });
+
+    // Retorna à posição original ao sair da área da div
+    box.addEventListener('mouseleave', function() {
+        box.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        box.style.boxShadow = '0 0 30px rgba(0, 0, 0, 0)';
+    });
+});
+
+
+    </script>
+</body>
+</html>
