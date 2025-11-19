@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @PaschBnj
-- 👀 I’m interested in be famous by my projects
-- 🌱 I’m currently learning JavaScript
-- 💞️ I’m looking to collaborate on the creation of websites to you
+- 👀 I’m interested in be an freelancer/casual/hobby programmer
+- 🌱 I’m currently learning MySQL
+- 💞️ I’m looking to collaborate on the creation of websites and sistems to your company
 - 📫 How to reach me: pasch.bnj.dev@gmail.com
 - 😄 Pronouns: he/his
 - ⚡ Fun fact: im 17y old
